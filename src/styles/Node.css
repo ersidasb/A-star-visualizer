@@ -1,0 +1,56 @@
+.node{
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    transition: 0.2s;
+}
+
+.node-start{
+    background-color: green;
+}
+
+.node-end{
+    background-color: red;
+}
+
+.wall{
+    background-color: black;
+    transition: 0.3s;
+}
+
+.visited{
+    animation-name: visitedAnimation;
+    animation-duration: 0.3s;
+    background-color: rgba(0, 190, 218, 0.75);
+}
+
+.path{
+    background-color: blue;
+}
+
+@keyframes visitedAnimation {
+    0% {
+      transform: scale(0.5);
+      background-color: rgba(0, 0, 66, 0.75);
+      border-radius: 100%;
+    }
+  
+    50% {
+      background-color: rgba(17, 104, 217, 0.75);
+    }
+  
+    75% {
+      transform: scale(1.2);
+      background-color: rgba(0, 217, 159, 0.75);
+    }
+  
+    100% {
+      transform: scale(1);
+      background-color: rgba(0, 190, 218, 0.75);
+    }
+}
